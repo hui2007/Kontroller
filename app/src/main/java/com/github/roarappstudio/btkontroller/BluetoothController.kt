@@ -152,7 +152,7 @@ object BluetoothController: BluetoothHidDevice.Callback(), BluetoothProfile.Serv
         Log.d("paired d", "paired devices are : $pairedDevices")
         Log.d("paired d","${btHid?.getConnectionState(pairedDevices?.get(0))}")
         mpluggedDevice = pluggedDevice
-            if(btHid?.getConnectionState(pluggedDevice)==0 && pluggedDevice!= null && autoPairFlag ==true)
+            if(btHid?.getConnectionState(pluggedDevice) == '0' && pluggedDevice!= null && autoPairFlag ==true)
         {
             btHid?.connect(pluggedDevice)
             //hostDevice.toString()
@@ -161,7 +161,7 @@ object BluetoothController: BluetoothHidDevice.Callback(), BluetoothProfile.Serv
         }
 
 
-        else if(btHid?.getConnectionState(pairedDevices?.get(0))==0 && autoPairFlag==true)
+        else if(btHid?.getConnectionState(pairedDevices?.get(0)) == '0' && autoPairFlag==true)
             {
                 Log.i("ddaaqq","sssS"
                 )
