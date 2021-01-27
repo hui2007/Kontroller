@@ -457,7 +457,7 @@ class SelectDeviceActivity: Activity(),KeyEvent.Callback {
             {
                 item.isChecked=true
                 BluetoothController.autoPairFlag=true
-                if(BluetoothController.btHid?.getConnectionState(BluetoothController.mpluggedDevice) = '0' && BluetoothController.mpluggedDevice!= null && BluetoothController.autoPairFlag ==true)
+                if(BluetoothController.btHid?.getConnectionState(BluetoothController.mpluggedDevice) = 0 && BluetoothController.mpluggedDevice!= null && BluetoothController.autoPairFlag ==true)
                 {
                     BluetoothController.btHid?.connect(BluetoothController.mpluggedDevice)
                     //hostDevice.toString()
